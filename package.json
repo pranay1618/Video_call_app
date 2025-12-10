@@ -1,0 +1,29 @@
+{
+  "name": "webrtc-sfu-video-call",
+  "version": "1.0.0",
+  "description": "Group video calling app with SFU and encryption",
+  "main": "dist/server/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server/server.js",
+    "dev": "npm run build && npm start"
+  },
+  "keywords": [
+    "webrtc",
+    "sfu",
+    "video-call",
+    "encryption"
+  ],
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.8.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.0",
+    "@types/uuid": "^9.0.2",
+    "typescript": "^5.1.6"
+  }
+}

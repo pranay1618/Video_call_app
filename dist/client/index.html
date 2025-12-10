@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebRTC SFU Video Call with Encryption</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+   
+    <div class="controls">
+      <div class="control-group">
+        <input 
+          type="text" 
+          id="room-input" 
+          placeholder="Enter room name"
+          value="default-room"
+        />
+        <button id="join-btn" class="btn btn-primary">Join Room</button>
+        <button id="leave-btn" class="btn btn-danger" style="display: none;">Leave Room</button>
+      </div>
+      <div id="room-info" class="room-info"></div>
+    </div>
+
+    <div class="video-section">
+      <div class="local-video-wrapper">
+        <h3>Your Video</h3>
+        <div class="video-container">
+          <video id="local-video" autoplay muted playsinline></video>
+          <div class="video-label">You (Local)</div>
+        </div>
+      </div>
+
+      <div class="remote-videos-wrapper">
+        <h3>Participants</h3>
+        <div id="video-grid" class="video-grid"></div>
+        <div id="no-participants" class="no-participants">
+          No other participants yet. Share the room link to invite others!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
